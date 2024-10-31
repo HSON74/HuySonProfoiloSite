@@ -3,7 +3,7 @@
     font-size: 96px;
     font-weight: bold;
     background-color: rgb(19, 19, 234);
-    background-image: "./Image/Final - Huy Son.jpg";
+    background-image: "";
     color:rgb(5, 5, 157);
     text-shadow: black;
     box-shadow: inset;
@@ -11,3 +11,192 @@
 .link{
     background-color: blueviolet;
 }
+.link_box{
+    background-color: rgb(200, 218, 127);
+    padding: 50px;
+    block-size: 100px;
+    width: 300px;
+    height: 1000px;
+    border: 10px solid rgb(98, 65, 176);
+}
+.button{
+    border: 1px solid black;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 5px;
+    
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #333;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #0077cc;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.hero a {
+    text-decoration: none;
+    background-color: #0077cc;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.hero a:hover {
+    background-color: #005fa3;
+}
+
+/* About Section */
+.about {
+    background-color: #fff;
+    padding: 60px 0;
+    margin-bottom: 40px;
+}
+
+.about h2 {
+    font-size: 32px;
+    color: #0077cc;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.portfolio h2 {
+    font-size: 32px;
+    color: #0077cc;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.portfolio .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.portfolio .item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio .item img {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio .item h3 {
+    font-size: 24px;
+    margin: 20px;
+    color: #333;
+}
+
+.portfolio .item p {
+    margin: 0 20px 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 16px;
+}
+/* Explanation:
+Global Styles: Reset margins and padding for all elements, and set a consistent box model.
+Header: Clean navigation with subtle hover effects and a bold site title.
+Hero Section: A full-width section with a background image and bold text, ideal for making an impactful first impression.
+About Section: Formal introduction with a soft background color.
+Portfolio Section: Uses a grid layout to neatly display portfolio items, each with a hover effect for more engagement.
+Footer: Simple footer with a dark background and centered text.
+Make sure to customize the url('hero-bg.jpg') with an appropriate background image for your hero section. */
