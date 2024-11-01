@@ -1,29 +1,18 @@
-import {
-    PerspectiveCamera,
-    Scene,
-    BoxGeometry,
-    MeshStandardMaterial,
-    Mesh,
-    WebGLRenderer,
-    AmbientLight,
-    DirectionalLight
-} from "./vendor/three/build/three.module.js";
-
-import { OrbitControls } from "./vendor/three/examples/jsm/controls/OrbitControls.js";
-import { GLTFLoader } from "./vendor/three/examples/jsm/loaders/GLTFLoader.js";
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.module.js';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.132.2/examples/jsm/controls/OrbitControls.js';
 
 let scene, camera, renderer, cube, controls;
 
 function init() {
     // Create the scene
-    scene = new Scene();
+    scene = new THREE.Scene();
 
     // Create a camera, which determines what we'll see when we render the scene
-    camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 5;
 
     // Create a renderer and attach it to our document
-    renderer = new WebGLRenderer({ antialias: true });
+    renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
 
@@ -31,17 +20,17 @@ function init() {
     controls = new OrbitControls(camera, renderer.domElement);
 
     // Create a cube and add it to the scene
-    const geometry = new BoxGeometry();
-    const material = new MeshStandardMaterial({ color: 0x0077ff });
-    cube = new Mesh(geometry, material);
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshStandardMaterial({ color: 0x0077ff });
+    cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
     // Add ambient light to the scene
-    const ambientLight = new AmbientLight(0x404040); // soft white light
+    const ambientLight = new THREE.AmbientLight(0x404040); // soft white light
     scene.add(ambientLight);
 
     // Add directional light to the scene
-    const directionalLight = new DirectionalLight(0xffffff, 1);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight.position.set(1, 1, 1).normalize();
     scene.add(directionalLight);
 
